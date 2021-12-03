@@ -17,20 +17,32 @@ General Usage
 ```sh
 ./dgf.sh <repo_url> <auth_token>
 ```
+Download [the sh documentation folder](https://github.com/torvalds/linux/tree/v5.15/Documentation/sh) in [linux repo v5.15](https://github.com/torvalds/linux/tree/v5.15)
+```sh
+./dgf.sh https://github.com/torvalds/linux/tree/v5.15/Documentation/sh 
+```
+
+```console
+linux/Documentation/sh/booting.rst
+linux/Documentation/sh/features.rst
+linux/Documentation/sh/index.rst
+linux/Documentation/sh/new-machine.rst
+linux/Documentation/sh/register-banks.rst
+```
 
 Download [a repo](https://github.com/OzanCansel/fsconfig) without personal access token
 ```sh
 ./dgf.sh https://github.com/OzanCansel/fsconfig/tree/master
 ```
 
-Download [a repo](https://github.com/OzanCansel/fsconfig) with your personal access token.
+Download [a repo](https://github.com/OzanCansel/fsconfig) with your [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 Note : Replace the token with yours, this token is fake.
 ```sh
 ./dgf.sh https://github.com/OzanCansel/fsconfig/tree/master ghp_N0PwoHr4yvYy21Cu5gscSdjImcGGtrauQcuy
 ```
 
-```
+```console
 fsconfig/.gitignore
 fsconfig/CMakeLists.txt
 fsconfig/LICENSE
@@ -59,7 +71,7 @@ Download [a folder](https://github.com/OzanCansel/fsconfig/tree/master/test) in 
 ./dgf.sh https://github.com/OzanCansel/fsconfig/tree/master/test
 ```
 
-```
+```console
 fsconfig/test/CMakeLists.txt
 fsconfig/test/car/engine/capacity
 fsconfig/test/car/engine/hp
@@ -73,18 +85,6 @@ fsconfig/test/set-test.cpp
 fsconfig/test/sub-test.cpp
 fsconfig/test/subscript-operator-test.cpp
 fsconfig/test/value-test.cpp
-```
-
-Download [the sh documentation folder](https://github.com/torvalds/linux/tree/v5.15/Documentation/sh) in [linux repo v5.15](https://github.com/torvalds/linux/tree/v5.15)
-```sh
-./dgf.sh https://github.com/torvalds/linux/tree/v5.15/Documentation/sh 
-```
-```
-linux/Documentation/sh/booting.rst
-linux/Documentation/sh/features.rst
-linux/Documentation/sh/index.rst
-linux/Documentation/sh/new-machine.rst
-linux/Documentation/sh/register-banks.rst
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
