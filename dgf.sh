@@ -7,11 +7,17 @@ then
 fi
 
 auth_token=""
-
 if [[ $# -ge 2 ]];
 then
 	auth_token=$2
 fi
+
+destination_path=""
+if [[ $# -ge 3 ]];
+then
+	destination_path=$3
+fi
+
 
 url=$1
 has_branch=$(echo ${url} | grep /tree/ > /dev/null; echo $?)
@@ -99,7 +105,14 @@ runners=()
 for ((i = 0; i < ${n_files}; i++));
 do
 	f_name=${file_names[i]}
-	path=${repo}/${paths[i]}
+	
+	if [ "${destination_path}" = "" ];
+	then
+		path=${repo}/${paths[i]}
+	else
+		path=${destination_path}/${file_names[i]}
+	fi
+
 	download_url=${download_urls[i]}
 
 	if [[ "${#runners[@]}" -ge 10 ]];
